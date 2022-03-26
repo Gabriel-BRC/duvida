@@ -46,31 +46,47 @@ var chao_options = {
 
 	
 	//Crie os Corpos Aqui.
-blocks1 = Bodies.circle(220,10,10,block1_options);
+blocks1 = Bodies.circle(220,10,10,blocks1_options);
 World.add(world,blocks1);
 
-blocks2 = Bodies.rectangle(110,50,10,10,block2_options);
+blocks2 = Bodies.rectangle(110,50,10,10,blocks2_options);
 World.add(world,blocks2);
 
-blocks3 = Bodies.rectangle(350,50,10,10,block3_options);
+blocks3 = Bodies.rectangle(350,50,10,10,blocks3_options);
 World.add(world,blocks3);
 
-chao = Bodies.rectangle(300, 200, 200, 20,chao_options);
+chao = Bodies.rectangle(300, 600, 500, 20,chao_options);
 World.add(world,chao);
   
 
 rectMode(CENTER);
 ellipseMode(RADIUS);
+
 }
 
 
 
 function draw() {
-  background(black);
-  
+  background(51);
   Engine.update(engine);
-  drawSprites();
+
+  ellipse(blocks1.position.x,blocks1.position.y,10);
+  
+
+  ellipse(blocks2.position.x,blocks2.position.y,10,10);
  
+
+  ellipse(blocks3.position.x,blocks3.position.y,10,10);
+ rect(chao.position.x,chao.position.y,500, 20);
+
+
+
+
+
+
+
+  
+ drawSprites();
 }
 
 
